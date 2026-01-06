@@ -463,8 +463,8 @@ class HHCBR(nn.Module):
 
         elif self.dataset_name == "MealRec+H":
             healthy_loss = cal_healthy_bpr_loss_plus_fsa(pred, positive_ids, negative_ids, fsa_path="/home/kazu/bundle/CrossCBR-master/datasets/MealRec+H/healthiness/bundle_fsa.txt")
-            # 2.0 3.1
-            bpr_loss = 2.0*bpr_loss + 3.1*healthy_loss 
+            # 1.9 3.0
+            bpr_loss = 1.9*bpr_loss + 3.0*healthy_loss 
             c_loss = 1.4*c_loss
 
         return bpr_loss, c_loss
@@ -515,4 +515,5 @@ class HHCBR(nn.Module):
         + torch.mm(BL_users_item_feature, BL_bundles_item_feature.t()) 
         + torch.mm(BL_users_ingredient_feature, BL_bundles_ingredient_feature.t())
         )
+
         return scores 
