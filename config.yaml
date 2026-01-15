@@ -10,8 +10,8 @@ MealRec+L:
   embedding_sizes: [64] 
   num_layerss: [2]
   lrs: [1.0e-3]
-  item_level_ratios: [0.2]
-  bundle_level_ratios: [0.2]
+  item_level_ratios: [0.05]
+  bundle_level_ratios: [0.05]
   bundle_agg_ratios: [0]
   user_agg_ratios: [0]
 
